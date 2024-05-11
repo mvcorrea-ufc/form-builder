@@ -2,6 +2,11 @@
 name = "form_builder"
 version = "0.1.0"
 edition = "2021"
+authors = ["Marcelo Correa <mvcorrea@gmail>"]
+description = "A form builder library in Rust for WebAssembly"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/mvcorrea-ufc/form-builder.git"
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -15,9 +20,15 @@ console_error_panic_hook = { version = "0.1", optional = true }
 
 
 [lib]
+path = "src/lib.rs"
 crate-type = ["cdylib"]
 
 [features]
 default = ["console_error_handling"]
 console_error_handling = ["console_error_panic_hook"]
+# Cargo features can be used to enable or disable parts of the code conditionally.
+#default = ["js-sys"]
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
 

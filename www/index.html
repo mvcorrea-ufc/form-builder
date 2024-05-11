@@ -1,16 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Form Builder</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
-    <h1>Form Builder</h1>
-    <div id="greeting"></div>
-    <script type="module">
-        import { loadWasm } from '/www/scripts/form-gen.js';
-        loadWasm();
-    </script>
+    <div id="component">
+        <h1>Form Builder</h1>
+        <div id="form_container"></div>
+        <script type="module">
+            import { loadWasm } from '/www/scripts/form-gen.js';
+            loadWasm();
+        </script>
+    </div>
 </body>
+
 </html>

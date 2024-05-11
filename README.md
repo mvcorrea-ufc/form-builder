@@ -2,13 +2,15 @@
 
 needs:
 cargo install wasm-pack
-
+~
 usage:
-wasm-pack build --target web
-python3 -m http.server --directory www 8080
+build binaries: wasm-pack build --target web
+Start httpSrv: python3 -m http.server 
+~~python3 -m http.server --directory www 808~~
+run tests: wasm-pack test --headless --firefox (needs firefox installed)
 
 
-Directory Structure
+Directory Structure (!should be)
 ´´´
 form_builder/
 │
